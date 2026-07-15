@@ -11,7 +11,13 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+/* Root type scale grows with the window so the whole layout stays proportionate
+   on large screens (16px on laptops/mobile, up to 22px on very wide monitors) */
+html {
+  font-size: clamp(16px, 11px + 0.39vw, 22px);
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
 
 body {
   background: var(--cream);
@@ -170,9 +176,14 @@ a { color: var(--amber-deep); }
 /* ---------- Hero ---------- */
 .hero { padding: 0 0 4rem; }
 
-/* Banner runs edge-to-edge at every width */
+/* Banner runs edge-to-edge but never swallows the landing screen:
+   capped at 72vh, cropping stays centered on the lettering and tart */
 .hero-banner img {
   width: 100%;
+  height: auto;
+  max-height: 72vh;
+  object-fit: cover;
+  object-position: 50% 42%;
   box-shadow: 0 10px 30px rgba(58, 50, 43, 0.12);
 }
 
