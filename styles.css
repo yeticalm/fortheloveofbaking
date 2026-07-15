@@ -34,9 +34,9 @@ a { color: var(--amber-deep); }
 }
 
 .container {
-  max-width: 84rem;
+  width: 94%;
+  max-width: none;
   margin: 0 auto;
-  padding: 0 1.25rem;
 }
 
 /* ---------- Nav ---------- */
@@ -50,9 +50,9 @@ a { color: var(--amber-deep); }
 }
 
 .nav-inner {
-  max-width: 84rem;
+  width: 94%;
   margin: 0 auto;
-  padding: 0.55rem 1.25rem;
+  padding: 0.55rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -170,25 +170,14 @@ a { color: var(--amber-deep); }
 /* ---------- Hero ---------- */
 .hero { padding: 0 0 4rem; }
 
-/* Banner runs edge-to-edge; on very wide screens it caps at its natural
-   resolution and gets its corners back */
-.hero-banner {
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
+/* Banner runs edge-to-edge at every width */
 .hero-banner img {
   width: 100%;
   box-shadow: 0 10px 30px rgba(58, 50, 43, 0.12);
 }
 
-@media (min-width: 1601px) {
-  .hero-banner { margin-top: 1.5rem; }
-  .hero-banner img { border-radius: 12px; }
-}
-
 .hero-text {
-  max-width: 44rem;
+  max-width: 62rem;
   margin: 2.5rem auto 0;
   text-align: center;
 }
@@ -239,7 +228,7 @@ a { color: var(--amber-deep); }
 
 .section-intro {
   text-align: center;
-  max-width: 40rem;
+  max-width: 52rem;
   margin: 0 auto 2.5rem;
 }
 
@@ -266,13 +255,11 @@ a { color: var(--amber-deep); }
 .about-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
-  gap: 3.5rem;
+  gap: 4rem;
   align-items: start;
-  max-width: 70rem;
-  margin: 0 auto;
 }
 
-.about-text { max-width: 65ch; }
+.about-text { font-size: 1.125rem; }
 
 .about-text p + p { margin-top: 1.1rem; }
 
@@ -282,7 +269,7 @@ a { color: var(--amber-deep); }
 }
 
 .pull-quote {
-  max-width: 38rem;
+  max-width: 52rem;
   margin: 3rem auto 0;
   text-align: center;
 }
@@ -301,7 +288,6 @@ a { color: var(--amber-deep); }
   font-size: 1.6rem;
   color: var(--amber-deep);
   text-align: right;
-  max-width: 70rem;
   margin: 2rem auto 0;
 }
 
@@ -403,7 +389,7 @@ a { color: var(--amber-deep); }
 }
 
 /* ---------- Contact ---------- */
-.contact-container { max-width: 44rem; }
+.contact-container { max-width: 56rem; }
 
 .contact-form {
   background: var(--white-warm);
