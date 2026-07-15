@@ -28,10 +28,10 @@ within a minute or two. No SFTP, no hosting plan needed.
 ## Before the site is "really" live — remaining placeholders
 
 - [ ] **Formspree form ID** — create a form in the Formspree dashboard (recipient:
-      the bakery email, added as a verified linked email). Then in `index.html`,
-      replace `FORM_ID_PLACEHOLDER` (one spot, in the `<form action=...>`).
-- [ ] **Bakery email** — in `index.html`, replace both occurrences of
-      `EMAIL_PLACEHOLDER` (the mailto link near the bottom of the Contact section).
+      megha.chandra@gmail.com, added as a verified linked email). Then in
+      `index.html`, replace `FORM_ID_PLACEHOLDER` (one spot, in the `<form action=...>`).
+- [x] **Bakery email & phone** — megha.chandra@gmail.com / (317) 361-7066, shown
+      in the Contact section.
 - [ ] **Photos** — replace the placeholder images in `/images` keeping the same
       filenames: `hero-photo.jpg`, `about-megha-avni.jpg`, `menu-cupcakes.jpg`,
       `menu-loaf-cakes.jpg`, `menu-custom-cookies.jpg`, `menu-special-orders.jpg`,
