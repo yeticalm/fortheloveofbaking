@@ -168,13 +168,18 @@ a { color: var(--amber-deep); }
 }
 
 /* ---------- Hero ---------- */
-.hero { padding: 3.5rem 0 4rem; }
+.hero { padding: 2.25rem 0 4rem; }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+.hero-banner img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(58, 50, 43, 0.12);
+}
+
+.hero-text {
+  max-width: 44rem;
+  margin: 2.5rem auto 0;
+  text-align: center;
 }
 
 .eyebrow {
@@ -194,23 +199,19 @@ a { color: var(--amber-deep); }
 .hero-subline {
   font-size: 1.15rem;
   max-width: 34rem;
-  margin-bottom: 1.75rem;
+  margin: 0 auto 1.75rem;
 }
 
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-}
-
-.hero-photo img {
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(58, 50, 43, 0.12);
+  justify-content: center;
 }
 
 @media (max-width: 760px) {
-  .hero { padding: 2.25rem 0 2.75rem; }
-  .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .hero { padding: 1.5rem 0 2.75rem; }
+  .hero-text { margin-top: 1.75rem; }
 }
 
 /* ---------- Sections ---------- */
