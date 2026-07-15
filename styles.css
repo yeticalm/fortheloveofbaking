@@ -34,7 +34,7 @@ a { color: var(--amber-deep); }
 }
 
 .container {
-  max-width: 68rem;
+  max-width: 78rem;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
@@ -50,7 +50,7 @@ a { color: var(--amber-deep); }
 }
 
 .nav-inner {
-  max-width: 68rem;
+  max-width: 78rem;
   margin: 0 auto;
   padding: 0.55rem 1.25rem;
   display: flex;
@@ -169,6 +169,13 @@ a { color: var(--amber-deep); }
 
 /* ---------- Hero ---------- */
 .hero { padding: 2.25rem 0 4rem; }
+
+.hero .container { max-width: 92rem; }
+
+.hero-banner {
+  max-width: 96rem;
+  margin: 0 auto;
+}
 
 .hero-banner img {
   width: 100%;
