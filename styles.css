@@ -145,22 +145,30 @@ a { color: var(--amber-deep); }
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 1.7rem;
   border-radius: 12px;
   font-weight: 700;
   font-size: 1rem;
+  letter-spacing: 0.01em;
   text-decoration: none;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease,
+              transform 0.18s ease, box-shadow 0.18s ease;
 }
+
+.btn:hover { transform: translateY(-2px); }
 
 .btn-primary {
   background: var(--amber);
   color: var(--white-warm);
+  box-shadow: 0 3px 10px rgba(232, 155, 46, 0.35);
 }
 
-.btn-primary:hover { background: var(--amber-deep); }
+.btn-primary:hover {
+  background: var(--amber-deep);
+  box-shadow: 0 6px 16px rgba(201, 127, 27, 0.4);
+}
 
 .btn-outline {
   background: transparent;
@@ -177,14 +185,13 @@ a { color: var(--amber-deep); }
 .hero { padding: 0 0 4rem; }
 
 /* Banner runs edge-to-edge but never swallows the landing screen:
-   capped at 72vh, cropping stays centered on the lettering and tart */
+   capped at 58vh, cropping stays centered on the lettering and tart */
 .hero-banner img {
   width: 100%;
   height: auto;
-  max-height: 72vh;
+  max-height: 58vh;
   object-fit: cover;
   object-position: 50% 42%;
-  box-shadow: 0 10px 30px rgba(58, 50, 43, 0.12);
 }
 
 .hero-text {
@@ -196,10 +203,10 @@ a { color: var(--amber-deep); }
 .eyebrow {
   color: var(--amber-deep);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
 }
 
 .hero h1 {
@@ -265,9 +272,9 @@ a { color: var(--amber-deep); }
 /* ---------- About ---------- */
 .about-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 1.55fr 1fr;
   gap: 4rem;
-  align-items: start;
+  align-items: center;
 }
 
 .about-text { font-size: 1.125rem; }
@@ -320,6 +327,12 @@ a { color: var(--amber-deep); }
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 14px rgba(58, 50, 43, 0.07);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(58, 50, 43, 0.13);
 }
 
 .section-alt .card { background: var(--white-warm); border: 1px solid rgba(58, 50, 43, 0.07); }
@@ -357,12 +370,19 @@ a { color: var(--amber-deep); }
 .find-block {
   background: var(--white-warm);
   border: 1px solid rgba(58, 50, 43, 0.07);
+  border-top: 3px solid var(--amber);
   border-radius: 12px;
-  padding: 1.75rem 1.5rem;
+  padding: 2rem 1.75rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.9rem;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.find-block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(58, 50, 43, 0.1);
 }
 
 .find-block h3 { font-size: 1.25rem; }
@@ -503,4 +523,7 @@ a { color: var(--amber-deep); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .btn, .card, .find-block, .ig-grid img { transition: none; }
+  .btn:hover, .card:hover, .find-block:hover { transform: none; }
+  .ig-grid a:hover img { transform: none; }
 }
