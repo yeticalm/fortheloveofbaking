@@ -1,5 +1,24 @@
 // For the Love of Baking — small enhancements: nav toggle, scroll reveal, form AJAX.
 
+// Always open at the top on plain loads — browsers otherwise restore the last
+// scroll position (Safari glides there thanks to CSS smooth scrolling).
+// Manual restoration also suppresses native anchor scrolling in some browsers,
+// so #contact-style links are scrolled by hand here too.
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+function applyScrollTarget(smooth) {
+  var el = location.hash && document.querySelector(location.hash);
+  if (el) {
+    el.scrollIntoView(smooth ? {} : { behavior: 'instant' });
+  } else {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }
+}
+applyScrollTarget(false);
+window.addEventListener('hashchange', function () { applyScrollTarget(true); });
+window.addEventListener('pageshow', function (e) {
+  if (e.persisted) applyScrollTarget(false);
+});
+
 // Footer year
 var yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
