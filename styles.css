@@ -181,23 +181,35 @@ a { color: var(--amber-deep); }
   color: var(--white-warm);
 }
 
-/* ---------- Hero ---------- */
-.hero { padding: 0 0 4rem; }
+/* ---------- Hero: HTML text beside text-free art, so nothing ever crops ---------- */
+.hero { padding: 3.5rem 0 4.5rem; }
 
-/* Banner runs edge-to-edge but never swallows the landing screen:
-   capped at 58vh, cropping stays centered on the lettering and tart */
-.hero-banner img {
-  width: 100%;
-  height: auto;
-  max-height: 58vh;
-  object-fit: cover;
-  object-position: 50% 42%;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
 }
 
-.hero-text {
-  max-width: 62rem;
-  margin: 2.5rem auto 0;
-  text-align: center;
+.hero-art img {
+  width: 100%;
+  max-height: 74vh;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(58, 50, 43, 0.16);
+}
+
+.hero-tagline {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--amber-deep);
+  margin-bottom: 1.2rem;
+}
+
+.hero-tagline span {
+  color: var(--amber);
+  margin-right: 0.35rem;
 }
 
 .eyebrow {
@@ -210,26 +222,27 @@ a { color: var(--amber-deep); }
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3.1rem);
-  margin-bottom: 1.1rem;
+  font-size: clamp(2.1rem, 3.4vw, 3.4rem);
+  margin-bottom: 0.9rem;
 }
 
 .hero-subline {
   font-size: 1.15rem;
   max-width: 34rem;
-  margin: 0 auto 1.75rem;
+  margin: 0 0 2rem;
 }
 
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-  justify-content: center;
 }
 
-@media (max-width: 760px) {
-  .hero { padding: 1.5rem 0 2.75rem; }
-  .hero-text { margin-top: 1.75rem; }
+@media (max-width: 860px) {
+  .hero { padding: 2rem 0 2.75rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+  .hero-art { max-width: 28rem; }
+  .hero-art img { max-height: 52vh; }
 }
 
 /* ---------- Sections ---------- */
