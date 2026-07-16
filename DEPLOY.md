@@ -27,9 +27,8 @@ within a minute or two. No SFTP, no hosting plan needed.
 
 ## Before the site is "really" live — remaining placeholders
 
-- [ ] **Formspree form ID** — create a form in the Formspree dashboard (recipient:
-      megha.chandra@gmail.com, added as a verified linked email). Then in
-      `index.html`, replace `FORM_ID_PLACEHOLDER` (one spot, in the `<form action=...>`).
+- [x] **Formspree** — live form `mrenellv`, submissions go to megha.chandra@gmail.com
+      (verified linked email on Kunal's Formspree account).
 - [x] **Bakery email & phone** — megha.chandra@gmail.com / (317) 361-7066, shown
       in the Contact section.
 - [ ] **Photos** — replace the placeholder images in `/images` keeping the same
